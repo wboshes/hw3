@@ -3,14 +3,9 @@ class PostsController < ApplicationController
   def index
     @posts = Post.all
   end
-
-  def show
-    @post = Post.find_by({ "id" => params["id"] })
-    @place = Place.find_by({ "id" => @post["company_id"] })
-  end
   
   def new
-  @post = Post.new
+    @post = Post.new
   end
   
   def create
@@ -21,6 +16,5 @@ class PostsController < ApplicationController
   @post.save
   redirect_to "/posts"
   end
-  
-end
 
+end
