@@ -1,1 +1,17 @@
-<h1>
+<%    
+
+places = Place.all
+
+%>
+
+<h1>Places</h1>
+
+<ul>
+
+<% for place in places %>
+
+  <li> <%= place["name"] %> </li>
+
+<% end %>
+
+</ul>
