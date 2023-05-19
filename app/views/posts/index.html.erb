@@ -5,5 +5,16 @@ posts = Post.all
 
 %>
 
-
 <h1>Posts</h1>
+
+<ul>
+
+  <% for post in posts %>
+
+    <li> <%= post["title"] %> </li>
+   <li> <%= post["description"] %> </li>
+   <li> <%= post["date"] %> </li>
+
+  <% end %>
+
+</ul>
