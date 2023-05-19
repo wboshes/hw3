@@ -1,9 +1,12 @@
-<h1>Name</h1>
-
-<ul>
+<div class="row">
   <% for post in @posts %>
-    <li>
-      <a href="/posts/<%= post["id"] %>"><%= company["title"] %></a>
-    </li>
+    <div class="col-3">
+      <h4><%= place["name"] %></h4>
+      <p><%= post["title"] %></p>
+      <p><%= post["posted_at"] %></p>
+      <p><%= post["description"] %></p>
+    </div>
   <% end %>
-</ul>
+</div>
+
+<p><a href="/posts/new">New Post</a></p
