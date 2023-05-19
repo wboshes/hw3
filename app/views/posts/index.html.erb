@@ -11,9 +11,14 @@ posts = Post.all
 
   <% for post in posts %>
 
-    <li> <%= post["title"] %> </li>
-   <li> <%= post["description"] %> </li>
-   <li> <%= post["date"] %> </li>
+    <% place = Place.find_by({ "id" => post["place_id"] }) %>
+
+    <li>
+      <%= post["title"] %>
+      <%= post["description"] %>
+      <%= post["date"] %>
+      <%= post["place_id"] %>
+    </li>
 
   <% end %>
 
